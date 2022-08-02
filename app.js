@@ -8,6 +8,15 @@ quistions(answersArr);
 function getInformation(name, gender, age) {
     var name= prompt("Enter your name, please");
     var gender=prompt("Enter your gender (male or female)");
+    for (var i=0; ;i++){
+        if (gender!=="male" && gender!=="female"){
+        alert("you should select (male or female)");
+        var gender=prompt("Enter your gender (male or female)");
+        }
+        else {
+            break;
+        }
+    }
     var age = prompt("Enter your age");
     if (age<0) {
         alert("Invalid age !!!"); 
@@ -28,9 +37,20 @@ function getInformation(name, gender, age) {
 }
 
 function quistions(answersArr) {
-    var q1=confirm("Are you Married?");
-    var q2=confirm("Are you Employee?");
-    var q3=confirm("Are you Avaliable?");
+    var q1=prompt("Are you Married?");
+    if ((q1 !== "yes" && q1 !== "no")){
+        return alert("Invalid")
+    }
+    var q2=prompt("Are you Employee?");
+    if ((q2 !== "yes" && q2 !== "no")){
+        return alert("Invalid")
+    }
+    var q3=prompt("Are you Avaliable?");
+    if ((q3 !== "yes" && q3 !== "no")){
+        return alert("Invalid")
+    }
     var answersArr=[q1,q2,q3];
+    for (let i=0 ; i<answersArr.length ; i++) {
     return console.log(answersArr);
+}
 }
